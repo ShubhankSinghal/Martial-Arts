@@ -8,7 +8,7 @@ let loadImage = (src, callback) => {
 };
 
 let imagePath = (frameNumber, animation) => {
-    return "https://github.com/ssharma2303/Martial-Arts/tree/main/images"+ animation + "/" + frameNumber + ".png";
+    return "images"+ animation + "/" + frameNumber + ".png";
 };
 
 let frames = {
