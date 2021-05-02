@@ -108,7 +108,7 @@ loadImages((images, ) => {
         else if(key === "ArrowUp"){
             queuedAnimations.push("forward");
         }
-        else if(key === "B"){
+        else if(key === "Space"){
             queuedAnimations.push("block");
         }
     });
