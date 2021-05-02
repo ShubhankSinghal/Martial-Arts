@@ -8,7 +8,7 @@ let loadImage = (src, callback) => {
 };
 
 let imagePath = (frameNumber, animation) => {
-    return "images/"+ animation + "/" + frameNumber;
+    return "images/"+ animation + "/" + frameNumber + ".png" +;
 };
 
 let frames = {
@@ -51,7 +51,7 @@ let animate = (ctx, images, animation, callback) => {
     setTimeout(callback, images[animation].length * 100);
 };
 
-loadImage((images) => {
+loadImages((images) => {
     let queuedAnimations = [];
 
     let aux = () => {
