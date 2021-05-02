@@ -6,7 +6,7 @@ let loadImage = (src, callback) => {
     img.onload = () => callback(img);
     img.src = src;
 }
-document.getElementById("myCanvas").style.background = "url('https://github.com/ssharma2303/Martial-Arts/blob/main/images/backgroundjpg')";
+document.getElementById("myCanvas").style.background = "url('https://github.com/ssharma2303/Martial-Arts/blob/main/images/background.jpg')";
 
 let myFunction = () => {
  var person = prompt("Please enter your name", "Harry Potter");
