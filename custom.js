@@ -5,7 +5,7 @@ let loadImage = (src, callback) => {
     let img = document.createElement("img");
     img.onload = () => callback(img);
     img.src = src;
-};
+}
 
 let imagePath = (frameNumber, animation) => {
     return "https://github.com/ssharma2303/Martial-Arts/blob/main/images/" + animation + "/" + frameNumber + ".png?raw=true" ;
