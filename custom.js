@@ -15,7 +15,7 @@ let frames = {
     idle : [1, 2, 3, 4, 5, 6, 7, 8],
     kick : [1, 2, 3, 4, 5, 6, 7],
     punch : [1, 2, 3, 4, 5, 6, 7],
-    back : [1, 2, 3, 4, 5, 6],
+    backward : [1, 2, 3, 4, 5, 6],
     forward : [1, 2, 3, 4, 5, 6],
     block : [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -25,7 +25,7 @@ let loadImages = (callback) => {
     let images = {idle:[], kick:[], punch:[], back:[], forward:[], block:[]};
     let imagesToLoad = 0; 
 
-    ["idle","kick","punch","back","forward","block"].forEach((animation) => {
+    ["idle","kick","punch","backward","forward","block"].forEach((animation) => {
         let animationFrames = frames[animation];
         imagesToLoad = imagesToLoad + animationFrames.length;
 
@@ -76,8 +76,8 @@ loadImages((images, ) => {
     document.getElementById("punch").onclick = () => {
         queuedAnimations.push("punch");
     };
-    document.getElementById("back").onclick = () => {
-        queuedAnimations.push("back");
+    document.getElementById("backward").onclick = () => {
+        queuedAnimations.push("backward");
     };
     document.getElementById("forward").onclick = () => {
         queuedAnimations.push("forward");
@@ -95,7 +95,7 @@ loadImages((images, ) => {
             queuedAnimations.push("punch");
         }
         else if(key === "ArrowDown"){
-            queuedAnimations.push("back");
+            queuedAnimations.push("backward");
         }
         else if(key === "ArrowUp"){
             queuedAnimations.push("forward");
