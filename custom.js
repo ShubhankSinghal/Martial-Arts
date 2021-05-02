@@ -6,14 +6,14 @@ let loadImage = (src, callback) => {
     img.onload = () => callback(img);
     img.src = src;
 }
- var txt;
- var person = prompt("Please enter your name:", "");
- if (person == null || person == "") {
-    txt = "User cancelled the prompt.";
-  } else {
-    txt = "Hello " + person + "! Lets Start you Martial Arts Training";
-  }
-  document.getElementById("demo").innerHTML = txt;
+let myFunction = () => {
+ var person = prompt("Please enter your name", "Harry Potter");
+
+if (person != null) {
+  document.getElementById("demo").innerHTML =
+  "Hello " + person + "! How are you today?";
+    }
+}
 
 let imagePath = (frameNumber, animation) => {
     return "https://github.com/ssharma2303/Martial-Arts/blob/main/images/"+ animation + "/" + frameNumber + ".png?raw=true";
