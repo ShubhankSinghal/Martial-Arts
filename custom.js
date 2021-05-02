@@ -47,12 +47,10 @@ let loadImages = (callback) => {
 
 let animate = (ctx, images, animation, callback) => {
     images[animation].forEach((image, index) => {
-        if(images[animation] === "kick") {
         setTimeout(()=>{
             ctx.clearRect(0, 0, 250, 300);
-            ctx.drawImage(image, 260, 310, 250, 300);
+            ctx.drawImage(image, 0, 0, 250, 300);
         }, index * 100);
-        }
     });
     setTimeout(callback, images[animation].length * 100);
 };
