@@ -11,7 +11,7 @@ let myFunction = () => {
 
 if (person != null) {
   document.getElementById("demo").innerHTML =
-  "Hello " + person + "! How are you today?";
+  "Hello " + person + "! Let's start. Click on the buttons below to learn some cool moves! ";
     }
 }
 
