@@ -9,7 +9,7 @@ let loadImage = (src, callback) => {
 
 var bkGround = new Image();
 bgImage.src = 'https://github.com/ssharma2303/Martial-Arts/blob/main/images/background.jpg';
-bkGround.onload = function(){
+bkGround.onload = () => {
 ctx.drawImage(bkGround,400,1261); 
 }
 let myFunction = () => {
