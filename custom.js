@@ -10,7 +10,7 @@ let loadImage = (src, callback) => {
 var bkGround = new Image();
 bkGround.src = 'https://github.com/ssharma2303/Martial-Arts/blob/main/images/background.jpg';
 bkGround.onload = () => {
-ctx.drawImage(bkGround,400,1261); 
+ctx.drawImage(bkGround, 0, 0); 
 }
 let myFunction = () => {
  var person = prompt("Please enter your name", "Harry Potter");
