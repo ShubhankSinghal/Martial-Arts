@@ -8,20 +8,24 @@ let loadImage = (src, callback) => {
 }
 
 let imagePath = (frameNumber, animation) => {
-    return "https://github.com/ssharma2303/Martial-Arts/blob/main/images/" + animation + "/" + frameNumber + ".png?raw=true" ;
+    return "C:/Users/sakshi23/Documents/prog-101/Game/images/"+ animation + "/" + frameNumber + ".png?raw=true";
 }
 
 let frames = {
     idle : [1, 2, 3, 4, 5, 6, 7, 8],
     kick : [1, 2, 3, 4, 5, 6, 7],
     punch : [1, 2, 3, 4, 5, 6, 7],
+    back : [1, 2, 3, 4, 5, 6],
+    forward : [1, 2, 3, 4, 5, 6],
+    block : [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
 };
 
 let loadImages = (callback) => {
-    let images = {idle:[], kick:[], punch:[]};
+    let images = {idle:[], kick:[], punch:[], back:[], forward:[], block:[]};
     let imagesToLoad = 0; 
 
-    ["idle","kick","punch"].forEach((animation) => {
+    ["idle","kick","punch","back","forward","block"].forEach((animation) => {
         let animationFrames = frames[animation];
         imagesToLoad = imagesToLoad + animationFrames.length;
 
@@ -44,14 +48,14 @@ let loadImages = (callback) => {
 let animate = (ctx, images, animation, callback) => {
     images[animation].forEach((image, index) => {
         setTimeout(()=>{
-            ctx.clearRect(0, 0, 500, 500);
-            ctx.drawImage(image, 0, 0, 500, 500);
+            ctx.clearRect(0, 0, 400, 1261);
+            ctx.drawImage(image, 0, 0, 400, 1261);
         }, index * 100);
     });
     setTimeout(callback, images[animation].length * 100);
 };
 
-loadImages((images) => {
+loadImages((images, ) => {
     let queuedAnimations = [];
 
     let aux = () => {
@@ -72,6 +76,15 @@ loadImages((images) => {
     document.getElementById("punch").onclick = () => {
         queuedAnimations.push("punch");
     };
+    document.getElementById("back").onclick = () => {
+        queuedAnimations.push("back");
+    };
+    document.getElementById("forward").onclick = () => {
+        queuedAnimations.push("forward");
+    };
+    document.getElementById("block").onclick = () => {
+        queuedAnimations.push("block");
+    };
 
     document.addEventListener("keyup", (event)=>{
         const key = event.key;
@@ -81,5 +94,14 @@ loadImages((images) => {
         }else if(key === "ArrowRight"){
             queuedAnimations.push("punch");
         }
-    })
+        else if(key === "ArrowDown"){
+            queuedAnimations.push("back");
+        }
+        else if(key === "ArrowUp"){
+            queuedAnimations.push("forward");
+        }
+        else if(key === "B"){
+            queuedAnimations.push("block");
+        }
+    });
 });
