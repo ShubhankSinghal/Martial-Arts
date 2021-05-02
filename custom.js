@@ -48,8 +48,8 @@ let loadImages = (callback) => {
 let animate = (ctx, images, animation, callback) => {
     images[animation].forEach((image, index) => {
         setTimeout(()=>{
-            ctx.clearRect(0, 0, 350, 1261);
-            ctx.drawImage(image, 0, 0, 350, 1261);
+            ctx.clearRect(0, 0, 150, 200);
+            ctx.drawImage(image, 0, 0, 150, 200);
         }, index * 100);
     });
     setTimeout(callback, images[animation].length * 100);
