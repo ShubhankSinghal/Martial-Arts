@@ -8,8 +8,8 @@ let loadImage = (src, callback) => {
 };
 
 let imagePath = (frameNumber, animation) => {
-    return "https://github.com/ssharma2303/Martial-Arts/blob/main/images/" + animation + "/" + frameNumber + ".png?raw=true" 
-};
+    return "https://github.com/ssharma2303/Martial-Arts/blob/main/images/" + animation + "/" + frameNumber + ".png?raw=true" ;
+}
 
 let frames = {
     idle : [1, 2, 3, 4, 5, 6, 7, 8],
