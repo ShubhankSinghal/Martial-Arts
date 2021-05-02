@@ -8,7 +8,7 @@ let loadImage = (src, callback) => {
 }
 
 let imagePath = (frameNumber, animation) => {
-    return "C:/Users/sakshi23/Documents/prog-101/Game/images/"+ animation + "/" + frameNumber + ".png?raw=true";
+    return "https://github.com/ssharma2303/Martial-Arts/blob/main/images/"+ animation + "/" + frameNumber + ".png?raw=true";
 }
 
 let frames = {
@@ -48,8 +48,8 @@ let loadImages = (callback) => {
 let animate = (ctx, images, animation, callback) => {
     images[animation].forEach((image, index) => {
         setTimeout(()=>{
-            ctx.clearRect(0, 0, 400, 1261);
-            ctx.drawImage(image, 0, 0, 400, 1261);
+            ctx.clearRect(0, 0, 350, 1261);
+            ctx.drawImage(image, 0, 0, 350, 1261);
         }, index * 100);
     });
     setTimeout(callback, images[animation].length * 100);
